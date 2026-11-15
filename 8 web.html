@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Авто из США — под ключ</title>
+
+<style>
+
+/* ОСНОВА */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #29252b;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+:root {
+    --purple: #310b3b;
+    --purple2: #50105f;
+    --pink: #872a98;
+    --gray: #777;
+}
+
+/* ШАПКА */
+
+header {
+    height: 65px;
+    padding: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--purple);
+}
+
+.logo span {
+    color: var(--pink);
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--pink);
+}
+
+.header-btn {
+    background: var(--purple);
+    color: white;
+    padding: 13px 19px;
+    font-size: 11px;
+}
+
+/* ПЕРВЫЙ ЭКРАН */
+
+.hero {
+    min-height: 340px;
+    background: var(--purple);
+    color: white;
+    position: relative;
+    padding: 65px 9%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.hero-text {
+    width: 55%;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-label {
+    color: #d4a5df;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 38px;
+    line-height: 1.2;
+    font-weight: 800;
+    margin-bottom: 17px;
+}
+
+.hero h1 span {
+    color: #d28be0;
+}
+
+.hero p {
+    max-width: 380px;
+    color: #e1d4e5;
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 13px 22px;
+    background: #852b98;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.hero-button:hover {
+    background: #a34bb4;
+}
+
+.hero-car {
+    position: absolute;
+    width: 57%;
+    height: 330px;
+    right: -2%;
+    bottom: -12px;
+    z-index: 1;
+}
+
+.hero-car img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* ОБЩИЕ СЕКЦИИ */
+
+section.content {
+    padding: 55px 9%;
+}
+
+.section-title {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.section-title span {
+    color: var(--pink);
+}
+
+.label {
+    font-size: 9px;
+    color: var(--pink);
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+/* О КОМПАНИИ */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+}
+
+.about-grid p {
+    color: #777;
+    font-size: 12px;
+    line-height: 1.9;
+    margin-bottom: 12px;
+}
+
+.about-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 10px;
+    color: var(--pink);
+    font-weight: bold;
+}
+
+.about-list {
+    border-top: 1px solid #ddd;
+}
+
+.about-row {
+    display: flex;
+    gap: 15px;
+    padding: 13px 5px;
+    border-bottom: 1px solid #ddd;
+    font-size: 11px;
+    align-items: center;
+}
+
+.about-row span {
+    color: var(--pink);
+    font-weight: bold;
+}
+
+/* ПРЕИМУЩЕСТВА */
+
+.advantages {
+    padding: 20px 9% 60px;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 35px;
+}
+
+.top-car {
+    height: 290px;
+    text-align: center;
+}
+
+.top-car img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.advantages-box {
+    background: var(--purple);
+    color: white;
+    padding: 30px;
+}
+
+.advantages-box h2 {
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+.advantages-box h2 span {
+    color: #d28be0;
+}
+
+.advantage {
+    padding: 12px 0;
+    border-bottom: 1px solid #68456f;
+    font-size: 11px;
+    color: #e5d9e8;
+}
+
+.advantage:last-child {
+    border: none;
+}
+
+/* КАТАЛОГ */
+
+.cars {
+    background: #f5f4f5;
+    padding: 55px 9%;
+}
+
+.cars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.car-card {
+    background: white;
+    transition: 0.3s;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+}
+
+.car-card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.car-description {
+    padding: 16px;
+}
+
+.car-description h3 {
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.car-description p {
+    font-size: 10px;
+    color: #888;
+    line-height: 1.7;
+}
+
+.car-description a {
+    display: inline-block;
+    color: var(--pink);
+    font-size: 10px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+/* КОНТАКТЫ */
+
+.contacts {
+    padding: 55px 9%;
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.contacts-text h2 {
+    font-size: 28px;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.contacts-text h2 span {
+    color: var(--pink);
+}
+
+.contacts-text p {
+    font-size: 12px;
+    color: #777;
+    line-height: 1.8;
+}
+
+.contact-form {
+    background: var(--purple);
+    padding: 28px;
+}
+
+.contact-form h3 {
+    color: white;
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 12px;
+    border: 1px solid #74527c;
+    background: transparent;
+    color: white;
+    outline: none;
+    font-size: 11px;
+}
+
+.contact-form input::placeholder {
+    color: #d1c0d5;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 14px;
+    background: #852b98;
+    color: white;
+    border: none;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ПОДВАЛ */
+
+footer {
+    background: #210727;
+    color: white;
+    padding: 25px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    font-size: 10px;
+    color: #c5b4ca;
+}
+
+footer a {
+    font-size: 11px;
+}
+
+/* ТЕЛЕФОН */
+
+@media (max-width: 650px) {
+
+    header {
+        padding: 0 5%;
+        height: 60px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .header-btn {
+        padding: 11px;
+        font-size: 9px;
+    }
+
+    .hero {
+        min-height: 510px;
+        padding: 40px 6%;
+        align-items: flex-start;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-car {
+        width: 100%;
+        height: 230px;
+        right: 0;
+        bottom: 0;
+    }
+
+    section.content {
+        padding: 45px 6%;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .advantages {
+        padding: 10px 6% 45px;
+    }
+
+    .advantages-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .top-car {
+        height: 230px;
+    }
+
+    .cars {
+        padding: 45px 6%;
+    }
+
+    .cars-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .car-card img {
+        height: 210px;
+    }
+
+    .contacts {
+        padding: 45px 6%;
+    }
+
+    .contacts-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    footer {
+        padding: 25px 6%;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <a href="#" class="logo">AUTO<span>USA</span></a>
+
+    <nav>
+        <a href="#about">О нас</a>
+        <a href="#advantages">Услуги</a>
+        <a href="#cars">Автомобили</a>
+        <a href="#contacts">Контакты</a>
+    </nav>
+
+    <a href="#contacts" class="header-btn">Оставить заявку</a>
+</header>
+
+
+<!-- ГЛАВНЫЙ БАННЕР -->
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <div class="hero-label">AUTO USA — АВТО ИЗ АМЕРИКИ</div>
+
+        <h1>
+            АВТОМОБИЛЬ ИЗ США
+            <br>
+            <span>ПОД КЛЮЧ</span>
+        </h1>
+
+        <p>
+            Найдём, проверим и доставим автомобиль
+            из Америки. Выгодно, надёжно и без лишних забот.
+        </p>
+
+        <a href="#contacts" class="hero-button">
+            ПОДОБРАТЬ АВТОМОБИЛЬ →
+        </a>
+
+    </div>
+
+    <div class="hero-car">
+        <img
+            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200"
+            alt="Автомобиль Porsche"
+        >
+    </div>
+
+</section>
+
+
+<!-- О НАС -->
+
+<section class="content" id="about">
+
+    <div class="label">01 — О КОМПАНИИ</div>
+
+    <h2 class="section-title">
+        НАШИ <span>УСЛУГИ</span>
+    </h2>
+
+    <div class="about-grid">
+
+        <div>
+            <p>
+                Мы помогаем приобрести автомобиль из США.
+                Подбираем подходящие варианты, изучаем историю
+                и организуем доставку.
+            </p>
+
+            <p>
+                С нами покупка автомобиля становится
+                понятной и удобной.
+            </p>
+
+            <a href="#contacts" class="about-link">
+                СВЯЗАТЬСЯ С НАМИ →
+            </a>
+        </div>
+
+        <div class="about-list">
+
+            <div class="about-row">
+                <span>01</span>
+                Индивидуальный подбор автомобиля
+            </div>
+
+            <div class="about-row">
+                <span>02</span>
+                Проверка истории автомобиля
+            </div>
+
+            <div class="about-row">
+                <span>03</span>
+                Организация покупки
+            </div>
+
+            <div class="about-row">
+                <span>04</span>
+                Доставка автомобиля
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ПРЕИМУЩЕСТВА -->
+
+<section class="advantages" id="advantages">
+
+    <div class="advantages-grid">
+
+        <div class="top-car">
+            <img
+                src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=900"
+                alt="Автомобиль"
+            >
+        </div>
+
+        <div class="advantages-box">
+
+            <h2>ПОЧЕМУ <span>МЫ?</span></h2>
+
+            <div class="advantage">
+                ✓ Индивидуальный подход к каждому клиенту
+            </div>
+
+            <div class="advantage">
+                ✓ Проверка доступной истории автомобиля
+            </div>
+
+            <div class="advantage">
+                ✓ Сопровождение процесса покупки
+            </div>
+
+            <div class="advantage">
+                ✓ Организация доставки
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- АВТОМОБИЛИ -->
+
+<section class="cars" id="cars">
+
+    <div class="label">02 — ПОПУЛЯРНЫЕ МОДЕЛИ</div>
+
+    <h2 class="section-title">
+        ПРИМЕРЫ <span>АВТОМОБИЛЕЙ</span>
+    </h2>
+
+    <div class="cars-grid">
+
+        <div class="car-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800"
+                alt="Chevrolet Camaro"
+            >
+
+            <div class="car-description">
+                <h3>CHEVROLET CAMARO</h3>
+                <p>Спортивный автомобиль с выразительным дизайном.</p>
+                <a href="#contacts">УЗНАТЬ БОЛЬШЕ →</a>
+            </div>
+
+        </div>
+
+        <div class="car-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800"
+                alt="Ford Mustang"
+            >
+
+            <div class="car-description">
+                <h3>FORD MUSTANG</h3>
+                <p>Легендарный автомобиль американского стиля.</p>
+                <a href="#contacts">УЗНАТЬ БОЛЬШЕ →</a>
+            </div>
+
+        </div>
+
+        <div class="car-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800"
+                alt="Porsche"
+            >
+
+            <div class="car-description">
+                <h3>PORSCHE 911</h3>
+                <p>Элегантный дизайн и спортивный характер.</p>
+                <a href="#contacts">УЗНАТЬ БОЛЬШЕ →</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- КОНТАКТЫ -->
+
+<section class="contacts" id="contacts">
+
+    <div class="contacts-grid">
+
+        <div class="contacts-text">
+
+            <div class="label">03 — КОНТАКТЫ</div>
+
+            <h2>
+                ВАШ АВТОМОБИЛЬ
+                <br>
+                <span>НАЧИНАЕТСЯ ЗДЕСЬ</span>
+            </h2>
+
+            <p>
+                Оставьте заявку, расскажите о своих пожеланиях
+                и мы поможем подобрать подходящий автомобиль.
+            </p>
+
+        </div>
+
+        <form class="contact-form">
+
+            <h3>ОСТАВИТЬ ЗАЯВКУ</h3>
+
+            <input type="text" placeholder="Ваше имя" required>
+
+            <input type="tel" placeholder="Ваш номер телефона" required>
+
+            <input type="text" placeholder="Марка автомобиля">
+
+            <button type="submit">ОТПРАВИТЬ →</button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <a href="#" class="logo" style="color:white">
+        AUTO<span>USA</span>
+    </a>
+
+    <p>АВТОМОБИЛИ ИЗ США ПОД КЛЮЧ</p>
+
+    <a href="#">НАВЕРХ ↑</a>
+
+</footer>
+
+</body>
+</html>
