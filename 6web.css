@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bishkek City Fest 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <a href="#home" class="logo">BISHKEK<span>.</span></a>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#festival">About</a>
+        <a href="#agenda">Schedule</a>
+        <a href="#speakers">Artists</a>
+        <a href="#tickets">Tickets</a>
+    </nav>
+
+    <a href="#tickets" class="nav-button">Get ticket ↗️</a>
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-card">
+
+        <div class="hero-top">
+            <span>JUNE 20–22, 2026</span>
+            <span>BISHKEK, KYRGYZSTAN</span>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="tag">THE CITY IS YOUR STAGE</span>
+
+                <h1>
+                    BISHKEK<br>
+                    CITY <span>FEST.</span>
+                </h1>
+
+                <p>
+                    Three days of music, art, culture and innovation.
+                    Discover the energy of a new generation in the
+                    heart of Kyrgyzstan.
+                </p>
+
+                <a href="#tickets" class="blue-button">
+                    Explore the festival ↗️
+                </a>
+            </div>
+
+            <div class="hero-art">
+                <div class="circle circle-one"></div>
+                <div class="circle circle-two"></div>
+                <div class="circle circle-three"></div>
+                <div class="art-text">BISHKEK<br>2026</div>
+                <div class="art-small">FESTIVAL<br>OF CULTURE</div>
+            </div>
+        </div>
+
+        <div class="hero-bottom">
+            <span>20–22 JUNE</span>
+            <span>ART · MUSIC · TECHNOLOGY</span>
+            <span>01 / 06</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PARTNERS -->
+<section class="partners">
+    <span>OUR PARTNERS</span>
+    <div>RED BULL</div>
+    <div>YOUTUBE</div>
+    <div>SPOTIFY</div>
+    <div>BEELINE</div>
+    <div>MEGA</div>
+</section>
+
+
+<!-- ABOUT FESTIVAL -->
+<section class="festival-section" id="festival">
+
+    <div class="section-top">
+        <span class="label">01 — ABOUT THE FESTIVAL</span>
+        <span class="side-text">A NEW CULTURAL EXPERIENCE</span>
+    </div>
+
+    <div class="about-grid">
+
+        <div class="about-title">
+            <h2>
+                MORE THAN<br>
+                JUST A <span>FEST.</span>
+            </h2>
+
+            <p>
+                Bishkek City Fest is a place where creativity,
+                modern culture and new ideas come together.
+                Meet people, discover talents and experience
+                the city in a different way.
+            </p>
+
+            <a href="#agenda" class="text-link">Discover the program ↗️</a>
+        </div>
+
+        <div class="about-card blue-card">
+            <span>01 / MUSIC</span>
+            <h3>Live Music</h3>
+            <p>
+                Enjoy live performances, DJs and amazing
+                musical experiences.
+            </p>
+            <div class="card-symbol">♫</div>
+        </div>
+
+        <div class="about-card light-card">
+            <span>02 / ART</span>
+            <h3>Creative Space</h3>
+            <p>
+                Explore modern art, photography,
+                installations and local creativity.
+            </p>
+            <div class="card-symbol">✳️</div>
+        </div>
+
+        <div class="about-card dark-card">
+            <span>03 / TECHNOLOGY</span>
+            <h3>Future Ideas</h3>
+            <p>
+                Discover digital projects, technology
+                and innovative solutions.
+            </p>
+            <div class="card-symbol">⌘</div>
+        </div>
+
+        <div class="about-card blue-card second-blue">
+            <span>04 / COMMUNITY</span>
+            <h3>Meet & Connect</h3>
+            <p>
+                Meet creative people, exchange ideas
+                and make new connections.
+            </p>
+            <div class="card-symbol">↗️</div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- AGENDA -->
+<section class="agenda-section" id="agenda">
+
+    <div class="section-top">
+        <span class="label">02 — EVENT SCHEDULE</span>
+        <span class="side-text">THREE DAYS OF INSPIRATION</span>
+    </div>
+
+    <div class="heading-row">
+        <h2>THE <span>AGENDA.</span></h2>
+        <p>June 20–22, 2026<br>Bishkek, Kyrgyzstan</p>
+    </div>
+
+    <div class="agenda-box">
+
+        <div class="agenda-item">
+            <div class="day">
+                <span>DAY 01</span>
+                <strong>09:00 – 21:00</strong>
+            </div>
+            <div class="agenda-name">
+                <h3>Opening & City Culture</h3>
+                <p>
+                    The festival begins with an opening ceremony,
+                    local artists, creative exhibitions and music.
+                </p>
+            </div>
+            <span class="agenda-number">01</span>
+        </div>
+
+        <div class="agenda-item">
+            <div class="day">
+                <span>DAY 02</span>
+                <strong>10:00 – 22:00</strong>
+            </div>
+            <div class="agenda-name">
+                <h3>Music & Creative Energy</h3>
+                <p>
+                    Live performances, DJ sets, art workshops
+                    and exciting activities throughout the day.
+                </p>
+            </div>
+            <span class="agenda-number">02</span>
+        </div>
+
+        <div class="agenda-item">
+            <div class="day">
+                <span>DAY 03</span>
+                <strong>10:00 – 20:00</strong>
+            </div>
+            <div class="agenda-name">
+                <h3>Future & Innovation</h3>
+                <p>
+                    Technology exhibitions, creative projects,
+                    networking and the final festival show.
+                </p>
+            </div>
+            <span class="agenda-number">03</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ARTISTS -->
+<section class="artists-section" id="speakers">
+
+    <div class="section-top">
+        <span class="label">03 — PEOPLE & TALENT</span>
+        <span class="side-text">MEET THE CREATORS</span>
+    </div>
+
+    <div class="heading-row">
+        <h2>CREATIVE <span>PEOPLE.</span></h2>
+        <p>
+            Discover the people who bring<br>
+            ideas and creativity to life.
+        </p>
+    </div>
+
+    <div class="artists-grid">
+
+        <div class="artist-card">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb"
+                 alt="Female artist">
+            <div class="artist-info">
+                <span>01 / MUSIC</span>
+                <h3>Music Artists</h3>
+                <p>Live performances & DJs</p>
+            </div>
+        </div>
+
+        <div class="artist-card">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d"
+                 alt="Creative person">
+            <div class="artist-info">
+                <span>02 / DESIGN</span>
+                <h3>Designers</h3>
+                <p>Art & visual creativity</p>
+            </div>
+        </div>
+
+        <div class="artist-card">
+            <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce"
+                 alt="Female creator">
+            <div class="artist-info">
+                <span>03 / ART</span>
+                <h3>Artists</h3>
+                <p>Modern art & photography</p>
+            </div>
+        </div>
+
+        <div class="artist-card">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e"
+                 alt="Male creator">
+            <div class="artist-info">
+                <span>04 / TECHNOLOGY</span>
+                <h3>Innovators</h3>
+                <p>Technology & new ideas</p>
+            </div>
+        </div>
+
+    </div>
+
+    <a href="#tickets" class="outline-button">Discover the festival ↗️</a>
+
+</section>
+
+
+<!-- WHY ATTEND -->
+<section class="why-section">
+
+    <div class="section-top">
+        <span class="label">04 — WHY JOIN US?</span>
+        <span class="side-text">MAKE YOUR SUMMER SPECIAL</span>
+    </div>
+
+    <div class="heading-row">
+        <h2>WHY <span>ATTEND?</span></h2>
+        <p>More experiences.<br>More connections. More memories.</p>
+    </div>
+
+    <div class="benefits-grid">
+
+        <div class="benefit-card">
+            <span>01</span>
+            <h3>New Experiences</h3>
+            <p>Discover new forms of art, music and modern culture.</p>
+        </div>
+
+        <div class="benefit-card">
+            <span>02</span>
+            <h3>Meet New People</h3>
+            <p>Connect with creative people from different communities.</p>
+        </div>
+
+        <div class="benefit-card">
+            <span>03</span>
+            <h3>Inspiration</h3>
+            <p>Find fresh ideas and explore different perspectives.</p>
+        </div>
+
+        <div class="benefit-card">
+            <span>04</span>
+            <h3>Unforgettable Days</h3>
+            <p>Spend three days full of energy, fun and creativity.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- REVIEWS -->
+<section class="reviews-section">
+
+    <div class="section-top">
+        <span class="label">05 — COMMUNITY</span>
+        <span class="side-text">SHARE THE EXPERIENCE</span>
+    </div>
+
+    <h2>WHAT PEOPLE <span>SAY.</span></h2>
+
+    <div class="reviews-grid">
+
+        <div class="review-card">
+            <span class="review-label">FESTIVAL EXPERIENCE</span>
+            <h3>“A whole new atmosphere!”</h3>
+            <p>
+                Music, art and so many interesting people.
+                I would definitely come again!
+            </p>
+            <strong>— Aida M.</strong>
+        </div>
+
+        <div class="review-card featured-review">
+            <span class="review-label">BEST MOMENT</span>
+            <h3>“The energy was amazing.”</h3>
+            <p>
+                It was great to see so many creative people
+                and discover something new in our city.
+            </p>
+            <strong>— Daniel K.</strong>
+        </div>
+
+        <div class="review-card">
+            <span class="review-label">CREATIVE COMMUNITY</span>
+            <h3>“So much inspiration!”</h3>
+            <p>
+                The festival brought together different
+                interests and generations.
+            </p>
+            <strong>— Meerim A.</strong>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TICKETS -->
+<section class="tickets-section" id="tickets">
+
+    <div class="section-top">
+        <span class="label">06 — JOIN THE FESTIVAL</span>
+        <span class="side-text">LIMITED TICKET OPTIONS</span>
+    </div>
+
+    <div class="heading-row">
+        <h2>GET YOUR <span>TICKET.</span></h2>
+        <p>Choose your experience<br>and be part of the festival.</p>
+    </div>
+
+    <div class="tickets-grid">
+
+        <div class="ticket-card featured-ticket">
+            <span class="ticket-type">01 / EARLY BIRD</span>
+            <h3>Early Bird Pass</h3>
+            <p>Access to all three festival days.</p>
+            <div class="price">1 500 <small>сом</small></div>
+            <a href="#contact" class="ticket-button white-button">Get your ticket ↗️</a>
+        </div>
+
+        <div class="ticket-card">
+            <span class="ticket-type">02 / STANDARD</span>
+            <h3>Standard Pass</h3>
+            <p>Full access to festival activities.</p>
+            <div class="price">2 500 <small>сом</small></div>
+            <a href="#contact" class="ticket-button">Get your ticket ↗️</a>
+        </div>
+
+        <div class="ticket-card">
+            <span class="ticket-type">03 / VIP</span>
+            <h3>VIP Experience</h3>
+            <p>Priority entrance and exclusive zone.</p>
+            <div class="price">4 500 <small>сом</small></div>
+            <a href="#contact" class="ticket-button">Get your ticket ↗️</a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+
+    <div class="contact-box">
+
+        <div class="contact-info">
+            <span class="label">07 — CONTACT US</span>
+
+            <h2>LET'S MAKE<br>SOMETHING <span>GREAT.</span></h2>
+
+            <p>
+                Have questions about the festival?
+                Contact our team. We are happy to help!
+            </p>
+
+            <div class="contact-details">
+                <div>
+                    <span>EMAIL</span>
+                    <strong>hello@bishkekcityfest.com</strong>
+                </div>
+
+                <div>
+                    <span>LOCATION</span>
+                    <strong>Bishkek, Kyrgyzstan</strong>
+                </div>
+
+                <div>
+                    <span>FOLLOW US</span>
+                    <strong>Instagram · Telegram · Facebook</strong>
+                </div>
+            </div>
+        </div>
+
+        <form class="contact-form">
+
+            <h3>GET IN TOUCH</h3>
+            <p>Send us a message</p>
+
+            <input type="text" placeholder="Your name">
+            <input type="email" placeholder="Your email">
+            <input type="text" placeholder="Subject">
+            <textarea placeholder="Your message"></textarea>
+
+            <button type="button">Send message ↗️</button>
+
+        </form>
+
+    </div>
+
+    <!-- LOCATION -->
+    <div class="location-box">
+        <div class="map-design">
+            <div class="map-line line-one"></div>
+            <div class="map-line line-two"></div>
+            <div class="map-line line-three"></div>
+            <div class="map-line line-four"></div>
+            <div class="map-pin">●</div>
+            <span>BISHKEK, KYRGYZSTAN</span>
+        </div>
+
+        <div class="location-text">
+            <span class="label">FESTIVAL LOCATION</span>
+            <h3>Meet us in Bishkek.</h3>
+            <p>Three days. One city. Endless possibilities.</p>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-top">
+        <div>
+            <a href="#home" class="logo">BISHKEK<span>.</span></a>
+            <p>Celebrate culture. Discover creativity.</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#festival">About</a>
+            <a href="#agenda">Schedule</a>
+            <a href="#tickets">Tickets</a>
+        </div>
+
+        <div class="newsletter">
+            <h3>STAY UPDATED</h3>
+            <p>Get festival news and updates.</p>
+            <form>
+                <input type="email" placeholder="Your email">
+                <button type="button">Subscribe ↗️</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2026 BISHKEK CITY FEST</span>
+        <span>MADE WITH CREATIVITY IN BISHKEK</span>
+    </div>
+
+</footer>
+
+</body>
+</html>
