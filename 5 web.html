@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineSpectra - Anime & Movies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <a href="#home" class="logo">
+            <span>●</span> CineSpectra
+        </a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#anime">Anime</a>
+            <a href="#movies">Movies</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <a href="#anime" class="header-btn">Explore</a>
+    </header>
+
+    <!-- WELCOME SECTION -->
+    <section class="welcome" id="home">
+
+        <div class="welcome-text">
+            <span class="small-title">YOUR WORLD OF CINEMA</span>
+
+            <h1>Discover a new world of <span>Anime.</span></h1>
+
+            <p>
+                Explore amazing stories, discover new characters
+                and find your next favorite movie with CineSpectra.
+            </p>
+
+            <a href="#anime" class="main-btn">Let's get started →</a>
+        </div>
+
+        <div class="welcome-image">
+            <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba"
+                 alt="Cinema">
+            <div class="image-label">
+                <span>✦</span>
+                Your next favorite story
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ANIME SECTION -->
+    <section class="anime-section" id="anime">
+
+        <div class="section-heading">
+            <div>
+                <span class="small-title">FIND YOUR FAVORITE</span>
+                <h2>Explore <span>Anime</span></h2>
+            </div>
+            <p>Choose your category and discover something new.</p>
+        </div>
+
+        <!-- FILTERS -->
+        <div class="filter-box">
+
+            <div class="filter">
+                <label>From Year</label>
+                <input type="number" placeholder="2000">
+            </div>
+
+            <div class="filter">
+                <label>To Year</label>
+                <input type="number" placeholder="2026">
+            </div>
+
+            <div class="filter">
+                <label>Select Category</label>
+                <select>
+                    <option>All categories</option>
+                    <option>Action</option>
+                    <option>Adventure</option>
+                    <option>Fantasy</option>
+                    <option>Romance</option>
+                </select>
+            </div>
+
+            <button class="clear-btn" type="reset">Clear</button>
+
+        </div>
+
+        <!-- ANIME TABLE -->
+        <div class="table-container">
+            <h3>Anime collection</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title ↕️</th>
+                        <th>Year ↕️</th>
+                        <th>Type ↕️</th>
+                        <th>Episodes ↕️</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Demon Slayer</td>
+                        <td>2019</td>
+                        <td>TV</td>
+                        <td>55</td>
+                    </tr>
+                    <tr>
+                        <td>Attack on Titan</td>
+                        <td>2013</td>
+                        <td>TV</td>
+                        <td>87</td>
+                    </tr>
+                    <tr>
+                        <td>Death Note</td>
+                        <td>2006</td>
+                        <td>TV</td>
+                        <td>37</td>
+                    </tr>
+                    <tr>
+                        <td>Jujutsu Kaisen</td>
+                        <td>2020</td>
+                        <td>TV</td>
+                        <td>47</td>
+                    </tr>
+                    <tr>
+                        <td>Naruto</td>
+                        <td>2002</td>
+                        <td>TV</td>
+                        <td>220</td>
+                    </tr>
+                    <tr>
+                        <td>One Piece</td>
+                        <td>1999</td>
+                        <td>TV</td>
+                        <td>1000+</td>
+                    </tr>
+                    <tr>
+                        <td>Your Name</td>
+                        <td>2016</td>
+                        <td>Movie</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Spirited Away</td>
+                        <td>2001</td>
+                        <td>Movie</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="table-bottom">
+                <button class="outline-btn">Previous</button>
+                <span>Page 1 of 5</span>
+                <button class="main-btn small-btn">Next →</button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- MOVIE DETAILS -->
+    <section class="details-section" id="movies">
+
+        <div class="details-image">
+            <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26"
+                 alt="Movie atmosphere">
+            <span class="rating">★ 9.2 / 10</span>
+        </div>
+
+        <div class="details-content">
+
+            <span class="small-title">FEATURED ANIME</span>
+            <h2>Your <span>Name</span></h2>
+
+            <p class="subtitle">Romance · Fantasy · Drama · 2016</p>
+
+            <h3>Description</h3>
+            <p class="description">
+                Two teenagers living in different places mysteriously
+                begin switching bodies. As they discover their connection,
+                they try to find each other and understand the strange
+                events happening in their lives.
+            </p>
+
+            <div class="movie-info">
+                <div>
+                    <span>Director</span>
+                    <strong>Makoto Shinkai</strong>
+                </div>
+
+                <div>
+                    <span>Release year</span>
+                    <strong>2016</strong>
+                </div>
+
+                <div>
+                    <span>Duration</span>
+                    <strong>1h 46min</strong>
+                </div>
+            </div>
+
+            <a href="#anime" class="main-btn">Explore more →</a>
+
+        </div>
+
+    </section>
+
+    <!-- MORE MOVIES -->
+    <section class="more-section" id="about">
+
+        <div class="section-heading">
+            <div>
+                <span class="small-title">YOU MAY ALSO LIKE</span>
+                <h2>Popular <span>Anime</span></h2>
+            </div>
+        </div>
+
+        <div class="movie-cards">
+
+            <div class="movie-card">
+                <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728"
+                     alt="Movie poster">
+                <div class="card-info">
+                    <h3>Movie Night</h3>
+                    <p>Adventure · 2024</p>
+                    <span>★ 8.9</span>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1"
+                     alt="Cinema poster">
+                <div class="card-info">
+                    <h3>Dream World</h3>
+                    <p>Fantasy · 2023</p>
+                    <span>★ 9.1</span>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c"
+                     alt="Cinema screen">
+                <div class="card-info">
+                    <h3>New Story</h3>
+                    <p>Drama · 2025</p>
+                    <span>★ 8.7</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="#home" class="logo">
+            <span>●</span> CineSpectra
+        </a>
+
+        <p>Discover stories. Feel emotions. Enjoy cinema.</p>
+
+        <p class="copyright">© 2026 CineSpectra. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
