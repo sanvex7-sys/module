@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COFFEE HOUSE</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3ece2;
+    color: #3d2b21;
+}
+
+/* ШАПКА */
+
+header {
+    background: #29201b;
+    padding: 22px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo {
+    color: #fff;
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #c99b70;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #eee0d2;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+nav a:hover {
+    color: #d6a778;
+}
+
+/* ГЛАВНЫЙ ЭКРАН */
+
+.hero {
+    min-height: 540px;
+    background:
+    linear-gradient(90deg, rgba(30,20,15,.9), rgba(30,20,15,.2)),
+    url("https://images.unsplash.com/photo-1442512595331-e89e73853f31");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 8%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 570px;
+}
+
+.label {
+    color: #d5a477;
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 46px;
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+.hero p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #e7d9cd;
+    margin-bottom: 28px;
+}
+
+.button {
+    display: inline-block;
+    background: #bd895d;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 13px;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #976744;
+}
+
+/* ОБЩИЕ ЗАГОЛОВКИ */
+
+section {
+    padding: 75px 8%;
+}
+
+h2 {
+    font-size: 29px;
+    margin-bottom: 25px;
+}
+
+/* О КОМПАНИИ */
+
+.about {
+    background: #d3b99e;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about p {
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.stat strong {
+    display: block;
+    font-size: 38px;
+    color: #68432e;
+    margin-bottom: 8px;
+}
+
+.stat span {
+    font-size: 13px;
+}
+
+/* КАТАЛОГ */
+
+.catalog {
+    background: #f7f2eb;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product {
+    background: white;
+    padding-bottom: 25px;
+    transition: .3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.product h3 {
+    padding: 20px 20px 10px;
+}
+
+.product p {
+    padding: 0 20px;
+    color: #8b7868;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* СОТРУДНИЧЕСТВО */
+
+.cooperation {
+    background: #48352b;
+    color: white;
+}
+
+.cooperation details {
+    border-bottom: 1px solid #8b7160;
+    padding: 20px 0;
+}
+
+.cooperation summary {
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.cooperation details p {
+    color: #d9c8b9;
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* ПОСТАВЩИКИ */
+
+.suppliers {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.supplier-text {
+    background: #d3b99e;
+    padding: 65px 12%;
+}
+
+.supplier-text p:not(.label) {
+    margin-top: 27px;
+    font-size: 14px;
+}
+
+.supplier-image {
+    min-height: 390px;
+    background: url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d");
+    background-size: cover;
+    background-position: center;
+}
+
+/* ЗАЯВКА */
+
+.application {
+    background: #e9ded1;
+    text-align: center;
+}
+
+.application form {
+    max-width: 750px;
+    margin: 35px auto 0;
+    padding: 35px;
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: left;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-bottom: 1px solid #bca997;
+    outline: none;
+    font-size: 13px;
+    font-family: Arial;
+}
+
+textarea {
+    grid-column: 1 / -1;
+    min-height: 90px;
+}
+
+.application button {
+    grid-column: 1 / -1;
+    background: #49352b;
+    color: white;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.application button:hover {
+    background: #bd895d;
+}
+
+/* ПАРТНЁРЫ */
+
+.partners {
+    background: #f7f2eb;
+}
+
+.partner-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.partner-list div {
+    background: #e6d8c9;
+    color: #68432e;
+    padding: 25px 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* НОВОСТИ */
+
+.news {
+    background: #d3b99e;
+}
+
+.news-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.news-card {
+    background: #eee3d7;
+    padding: 25px;
+    min-height: 190px;
+}
+
+.news-card small {
+    color: #98775e;
+}
+
+.news-card h3 {
+    margin: 20px 0 12px;
+}
+
+.news-card p {
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* КОНТАКТЫ */
+
+.contacts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: center;
+    background: #f7f2eb;
+}
+
+.contacts p {
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.contact-photo {
+    height: 300px;
+    background: url("https://images.unsplash.com/photo-1509042239860-f550ce710b93");
+    background-size: cover;
+    background-position: center;
+}
+
+/* ПОДВАЛ */
+
+footer {
+    background: #29201b;
+    color: #d7c5b5;
+    padding: 35px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+footer p {
+    font-size: 12px;
+}
+
+/* ТЕЛЕФОН И ПЛАНШЕТ */
+
+@media(max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 430px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .about,
+    .suppliers,
+    .contacts {
+        grid-template-columns: 1fr;
+    }
+
+    .products,
+    .news-list {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        gap: 20px;
+    }
+
+    .supplier-image {
+        min-height: 250px;
+    }
+
+    .application form {
+        grid-template-columns: 1fr;
+        padding: 22px;
+    }
+
+    .application textarea,
+    .application button {
+        grid-column: 1;
+    }
+
+    .partner-list {
+        justify-content: center;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">COFFEE<span>HOUSE</span></div>
+
+    <nav>
+        <a href="#about">О компании</a>
+        <a href="#catalog">Каталог</a>
+        <a href="#partners">Партнёры</a>
+        <a href="#contacts">Контакты</a>
+        <a href="#application">Сотрудничество</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <div class="label">МИР КАЧЕСТВЕННОГО КОФЕ</div>
+        <h1>Искусство кофе в каждой чашке</h1>
+        <p>Оптовые поставки натурального кофе и кофейной продукции от лучших производителей.</p>
+        <a href="#catalog" class="button">Посмотреть каталог</a>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div>
+        <div class="label">О КОМПАНИИ</div>
+        <h2>COFFEE HOUSE</h2>
+        <p>Мы — компания, специализирующаяся на поставках качественного кофе. Работаем с магазинами, кафе и ресторанами. Предлагаем широкий ассортимент и надёжное сотрудничество.</p>
+    </div>
+
+    <div class="stats">
+        <div class="stat">
+            <strong>10+</strong>
+            <span>Лет опыта</span>
+        </div>
+        <div class="stat">
+            <strong>250+</strong>
+            <span>Партнёров</span>
+        </div>
+        <div class="stat">
+            <strong>1500</strong>
+            <span>Товаров в каталоге</span>
+        </div>
+        <div class="stat">
+            <strong>24/7</strong>
+            <span>Поддержка клиентов</span>
+        </div>
+    </div>
+</section>
+
+<section class="catalog" id="catalog">
+    <div class="label">НАШИ ТОВАРЫ</div>
+    <h2>КАТАЛОГ ПРОДУКЦИИ</h2>
+
+    <div class="products">
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31">
+            <h3>Кофейные зёрна</h3>
+            <p>Арабика, робуста и лучшие кофейные смеси.</p>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085">
+            <h3>Молотый кофе</h3>
+            <p>Насыщенный вкус и неповторимый аромат.</p>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+            <h3>Кофейные напитки</h3>
+            <p>Продукция для любителей настоящего кофе.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cooperation">
+    <div class="label">НАШИ УСЛОВИЯ</div>
+    <h2>СОТРУДНИЧЕСТВО</h2>
+
+    <details open>
+        <summary>Условия сотрудничества</summary>
+        <p>Индивидуальный подход, выгодные предложения и постоянная поддержка.</p>
+    </details>
+
+    <details>
+        <summary>Условия оплаты</summary>
+        <p>Удобные варианты оплаты для наших клиентов.</p>
+    </details>
+
+    <details>
+        <summary>Доставка</summary>
+        <p>Бережная доставка заказов в согласованные сроки.</p>
+    </details>
+</section>
+
+<section class="suppliers">
+    <div class="supplier-text">
+        <div class="label">ДЛЯ ПРОИЗВОДИТЕЛЕЙ</div>
+        <h2>ПОСТАВЩИКАМ И ПАРТНЁРАМ</h2>
+        <p>01 — Качество продукции</p>
+        <p>02 — Надёжное сотрудничество</p>
+        <p>03 — Долгосрочное партнёрство</p>
+    </div>
+    <div class="supplier-image"></div>
+</section>
+
+<section class="application" id="application">
+    <div class="label">НАЧНЁМ РАБОТАТЬ ВМЕСТЕ</div>
+    <h2>ОСТАВИТЬ ЗАЯВКУ</h2>
+
+    <form>
+        <input type="text" placeholder="Ваше имя">
+        <input type="text" placeholder="Название компании">
+        <input type="tel" placeholder="Ваш телефон">
+        <input type="email" placeholder="Ваша почта">
+        <textarea placeholder="Ваш комментарий"></textarea>
+        <button type="button">ОТПРАВИТЬ ЗАЯВКУ</button>
+    </form>
+</section>
+
+<section class="partners" id="partners">
+    <div class="label">НАМ ДОВЕРЯЮТ</div>
+    <h2>НАШИ ПАРТНЁРЫ</h2>
+
+    <div class="partner-list">
+        <div>AROMA</div>
+        <div>COFFEE PRO</div>
+        <div>CAFE CITY</div>
+        <div>COFFEE TIME</div>
+    </div>
+</section>
+
+<section class="news">
+    <div class="label">ПОСЛЕДНИЕ СОБЫТИЯ</div>
+    <h2>НОВОСТИ</h2>
+
+    <div class="news-list">
+        <div class="news-card">
+            <small>15.10.2026</small>
+            <h3>Новые сорта кофе</h3>
+            <p>В нашем каталоге появились новые сорта ароматного кофе.</p>
+        </div>
+
+        <div class="news-card">
+            <small>10.10.2026</small>
+            <h3>Расширение поставок</h3>
+            <p>Мы расширяем ассортимент кофейной продукции.</p>
+        </div>
+
+        <div class="news-card">
+            <small>05.10.2026</small>
+            <h3>Новые партнёры</h3>
+            <p>Рады приветствовать новых участников нашей команды.</p>
+        </div>
+    </div>
+</section>
+
+<section class="contacts" id="contacts">
+    <div>
+        <div class="label">МЫ ВСЕГДА НА СВЯЗИ</div>
+        <h2>КОНТАКТЫ</h2>
+        <p>Телефон: +996 555 123 456</p>
+        <p>Email: coffeehouse@mail.com</p>
+        <p>Адрес: Бишкек, Кыргызстан</p>
+    </div>
+
+    <div class="contact-photo"></div>
+</section>
+
+<footer>
+    <div class="logo">COFFEE<span>HOUSE</span></div>
+    <p>© 2026 COFFEE HOUSE. Все права защищены.</p>
+</footer>
+
+</body>
+</html>
