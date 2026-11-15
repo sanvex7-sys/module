@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foodie - Food Delivery</title>
+
+<style>
+
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #222222;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+:root {
+    --orange: #f45135;
+    --light-orange: #fff0eb;
+    --dark: #171717;
+    --gray: #777777;
+}
+
+/* HEADER */
+
+header {
+    height: 75px;
+    padding: 0 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: var(--orange);
+}
+
+.logo span {
+    color: #252525;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    font-size: 12px;
+    font-weight: 600;
+    color: #444;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: var(--orange);
+}
+
+.header-btn {
+    background: var(--orange);
+    color: white;
+    padding: 13px 22px;
+    border-radius: 25px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/* HERO */
+
+.hero {
+    padding: 65px 9%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-content {
+    max-width: 460px;
+}
+
+.hero-label {
+    color: var(--orange);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--orange);
+}
+
+.hero p {
+    color: var(--gray);
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+.main-btn {
+    display: inline-block;
+    background: var(--orange);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 25px;
+    font-size: 11px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.main-btn:hover {
+    background: #d93b25;
+    transform: translateY(-3px);
+}
+
+.app-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.app-btn {
+    padding: 10px 13px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.hero-image {
+    height: 340px;
+    background: #fff3e5;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* DISHES */
+
+.dishes {
+    padding: 65px 9%;
+    text-align: center;
+}
+
+.section-label {
+    font-size: 10px;
+    color: var(--orange);
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.section-title span {
+    color: var(--orange);
+}
+
+.section-description {
+    font-size: 12px;
+    line-height: 1.8;
+    color: var(--gray);
+    max-width: 500px;
+    margin: 0 auto 35px;
+}
+
+.dish-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.dish-card {
+    padding: 25px 15px;
+    background: #fffaf8;
+    border-radius: 12px;
+    transition: .3s;
+}
+
+.dish-card:hover {
+    transform: translateY(-5px);
+    background: var(--light-orange);
+}
+
+.dish-icon {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.dish-card h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.dish-card p {
+    font-size: 10px;
+    color: var(--gray);
+}
+
+/* PROMOTION */
+
+.promotion {
+    padding: 35px 9%;
+}
+
+.promotion-box {
+    background: var(--light-orange);
+    border-radius: 18px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.promotion-box h2 {
+    font-size: 28px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.promotion-box h2 span {
+    color: var(--orange);
+}
+
+.promotion-box p {
+    font-size: 12px;
+    color: var(--gray);
+    line-height: 1.8;
+}
+
+.promotion-image {
+    height: 180px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.promotion-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* HOW TO ORDER */
+
+.order {
+    padding: 70px 9%;
+    text-align: center;
+}
+
+.order-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 40px;
+}
+
+.order-card {
+    padding: 25px 15px;
+    background: #fafafa;
+    border-radius: 12px;
+}
+
+.order-number {
+    color: var(--orange);
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.order-icon {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.order-card h3 {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.order-card p {
+    color: var(--gray);
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+/* FEEDBACK */
+
+.feedback {
+    padding: 65px 9%;
+    text-align: center;
+    background: #fffaf8;
+}
+
+.quote {
+    color: var(--orange);
+    font-size: 55px;
+    font-weight: 800;
+    margin-top: 30px;
+}
+
+.feedback-text {
+    max-width: 550px;
+    margin: 10px auto 20px;
+    font-size: 13px;
+    color: #666;
+    line-height: 1.9;
+}
+
+.client-name {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.stars {
+    color: var(--orange);
+    font-size: 17px;
+    margin-top: 12px;
+}
+
+/* NEWSLETTER */
+
+.newsletter {
+    background: #fff0eb;
+    padding: 45px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.newsletter h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.newsletter p {
+    font-size: 11px;
+    color: var(--gray);
+}
+
+.newsletter-form {
+    display: flex;
+    width: 400px;
+    max-width: 100%;
+    background: white;
+    border-radius: 30px;
+    padding: 5px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: none;
+    outline: none;
+    font-size: 11px;
+}
+
+.newsletter-form button {
+    border: none;
+    background: var(--orange);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+/* FOOTER */
+
+footer {
+    background: #171717;
+    color: white;
+    padding: 55px 9% 25px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr repeat(3, 1fr);
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: var(--orange);
+    margin-bottom: 15px;
+}
+
+.footer-logo span {
+    color: white;
+}
+
+.footer-about p {
+    font-size: 11px;
+    line-height: 1.8;
+    color: #999;
+    max-width: 200px;
+}
+
+.footer-column h3 {
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.footer-column a {
+    display: block;
+    font-size: 10px;
+    color: #999;
+    margin-bottom: 13px;
+}
+
+.footer-column a:hover {
+    color: var(--orange);
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    color: #888;
+    font-size: 10px;
+}
+
+/* ADAPTIVE */
+
+@media (max-width: 750px) {
+
+    header {
+        padding: 0 5%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 45px 6%;
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-image {
+        height: 260px;
+    }
+
+    .dishes,
+    .order,
+    .feedback {
+        padding: 50px 6%;
+    }
+
+    .promotion {
+        padding: 20px 6%;
+    }
+
+    .promotion-box {
+        grid-template-columns: 1fr;
+    }
+
+    .order-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .newsletter {
+        padding: 35px 6%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .newsletter-form {
+        width: 100%;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 450px) {
+
+    .header-btn {
+        padding: 11px 13px;
+        font-size: 9px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .section-title {
+        font-size: 25px;
+    }
+
+    .dish-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .order-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .promotion-box h2 {
+        font-size: 24px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <a href="#" class="logo">🍕 <span>Foodie</span></a>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#dishes">Menu</a>
+        <a href="#order">How to order</a>
+        <a href="#feedback">Reviews</a>
+    </nav>
+
+    <a href="#dishes" class="header-btn">Order Now</a>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="hero-label">
+            FAST FOOD DELIVERY
+        </div>
+
+        <h1>
+            Your Favorite Food
+            <span>Delivery Partner</span>
+        </h1>
+
+        <p>
+            Fresh food, fast delivery, and delicious
+            meals right to your door. Enjoy your
+            favorite dishes whenever you want!
+        </p>
+
+        <a href="#dishes" class="main-btn">
+            Order Your Food →
+        </a>
+
+        <div class="app-buttons">
+            <a href="#" class="app-btn">🍎 App Store</a>
+            <a href="#" class="app-btn">▶️ Google Play</a>
+        </div>
+
+    </div>
+
+    <div class="hero-image">
+        <img
+            src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=900"
+            alt="Food delivery chef"
+        >
+    </div>
+
+</section>
+
+
+<!-- DISHES -->
+
+<section class="dishes" id="dishes">
+
+    <div class="section-label">OUR MENU</div>
+
+    <h2 class="section-title">
+        More Than <span>10,000</span> Dishes
+        <br>To Order!
+    </h2>
+
+    <p class="section-description">
+        Discover delicious meals and choose
+        your favorite food from our menu.
+    </p>
+
+    <div class="dish-grid">
+
+        <div class="dish-card">
+            <div class="dish-icon">🍕</div>
+            <h3>Pizza</h3>
+            <p>Fresh and delicious</p>
+        </div>
+
+        <div class="dish-card">
+            <div class="dish-icon">🍔</div>
+            <h3>Burgers</h3>
+            <p>Juicy and tasty</p>
+        </div>
+
+        <div class="dish-card">
+            <div class="dish-icon">🍣</div>
+            <h3>Sushi</h3>
+            <p>Fresh Japanese food</p>
+        </div>
+
+        <div class="dish-card">
+            <div class="dish-icon">🍟</div>
+            <h3>Snacks</h3>
+            <p>Perfect for sharing</p>
+        </div>
+
+        <div class="dish-card">
+            <div class="dish-icon">🥗</div>
+            <h3>Salads</h3>
+            <p>Fresh and healthy</p>
+        </div>
+
+        <div class="dish-card">
+            <div class="dish-icon">🍰</div>
+            <h3>Desserts</h3>
+            <p>Sweet moments</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROMOTION -->
+
+<section class="promotion">
+
+    <div class="promotion-box">
+
+        <div>
+            <div class="section-label">SPECIAL OFFER</div>
+
+            <h2>
+                Find Fresh, <span>Delicious</span>
+                and More!
+            </h2>
+
+            <p>
+                Enjoy tasty meals, quick delivery
+                and a wonderful food experience
+                every single day.
+            </p>
+        </div>
+
+        <div class="promotion-image">
+            <img
+                src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=900"
+                alt="Delicious pizza"
+            >
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- HOW TO ORDER -->
+
+<section class="order" id="order">
+
+    <div class="section-label">SIMPLE PROCESS</div>
+
+    <h2 class="section-title">
+        How To <span>Order?</span>
+    </h2>
+
+    <p class="section-description">
+        Just four easy steps to enjoy your favorite food.
+    </p>
+
+    <div class="order-grid">
+
+        <div class="order-card">
+            <div class="order-number">01</div>
+            <div class="order-icon">📍</div>
+            <h3>Choose Your Location</h3>
+            <p>Enter your delivery address.</p>
+        </div>
+
+        <div class="order-card">
+            <div class="order-number">02</div>
+            <div class="order-icon">🍽️</div>
+            <h3>Choose What To Eat</h3>
+            <p>Find your favorite dishes.</p>
+        </div>
+
+        <div class="order-card">
+            <div class="order-number">03</div>
+            <div class="order-icon">🛵</div>
+            <h3>Pay Your Order</h3>
+            <p>Complete your order easily.</p>
+        </div>
+
+        <div class="order-card">
+            <div class="order-number">04</div>
+            <div class="order-icon">🎉</div>
+            <h3>Enjoy Your Food</h3>
+            <p>Receive your delicious meal.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FEEDBACK -->
+
+<section class="feedback" id="feedback">
+
+    <div class="section-label">TESTIMONIALS</div>
+
+    <h2 class="section-title">
+        Our Clients <span>Feedback</span>
+    </h2>
+
+    <p class="section-description">
+        We care about every customer and
+        appreciate your feedback.
+    </p>
+
+    <div class="quote">“</div>
+
+    <p class="feedback-text">
+        I love the fresh food, excellent customer
+        service and fast delivery! Everything was
+        delicious and the experience was wonderful.
+        I will definitely order again!
+    </p>
+
+    <div class="client-name">Happy Customer</div>
+
+    <div class="stars">★★★★★</div>
+
+</section>
+
+
+<!-- NEWSLETTER -->
+
+<section class="newsletter">
+
+    <div>
+        <h2>Subscribe our newsletter</h2>
+        <p>Get the latest news, offers and special discounts.</p>
+    </div>
+
+    <form class="newsletter-form">
+
+        <input
+            type="email"
+            placeholder="Enter your email address"
+            required
+        >
+
+        <button type="submit">Join</button>
+
+    </form>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div class="footer-about">
+
+            <div class="footer-logo">
+                🍕 Foodie
+            </div>
+
+            <p>
+                Delicious food and fast delivery.
+                Your favorite meals are just
+                one click away.
+            </p>
+
+            <div class="app-buttons">
+                <a href="#" class="app-btn">App Store</a>
+                <a href="#" class="app-btn">Google Play</a>
+            </div>
+
+        </div>
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="#home">Home</a>
+            <a href="#dishes">Our Menu</a>
+            <a href="#order">How To Order</a>
+            <a href="#feedback">Reviews</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Our Menu</h3>
+            <a href="#dishes">Pizza</a>
+            <a href="#dishes">Burgers</a>
+            <a href="#dishes">Sushi</a>
+            <a href="#dishes">Desserts</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Contact Us</h3>
+            <a href="#">About Us</a>
+            <a href="#">Support</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2026 Foodie. All rights reserved.</span>
+        <span>Made with ❤️ for food lovers</span>
+    </div>
+
+</footer>
+
+</body>
+</html>
