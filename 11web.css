@@ -1,0 +1,409 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3ece2;
+    color: #3d2b21;
+}
+
+header {
+    background: #29201b;
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #c99b70;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #eee0d2;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+nav a:hover {
+    color: #d6a778;
+}
+
+.hero {
+    min-height: 540px;
+    background:
+    linear-gradient(90deg, rgba(30,20,15,.9), rgba(30,20,15,.2)),
+    url("https://images.unsplash.com/photo-1442512595331-e89e73853f31");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 8%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 570px;
+}
+
+.label {
+    color: #d5a477;
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 46px;
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+.hero p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #e7d9cd;
+    margin-bottom: 28px;
+}
+
+.button {
+    display: inline-block;
+    background: #bd895d;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 13px;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #976744;
+}
+
+section {
+    padding: 75px 8%;
+}
+
+h2 {
+    font-size: 29px;
+    margin-bottom: 25px;
+}
+
+.about {
+    background: #d3b99e;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about p {
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.stat strong {
+    display: block;
+    font-size: 38px;
+    color: #68432e;
+    margin-bottom: 8px;
+}
+
+.stat span {
+    font-size: 13px;
+}
+
+.catalog {
+    background: #f7f2eb;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product {
+    background: white;
+    padding-bottom: 25px;
+    transition: .3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.product h3 {
+    padding: 20px 20px 10px;
+}
+
+.product p {
+    padding: 0 20px;
+    color: #8b7868;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.cooperation {
+    background: #48352b;
+    color: white;
+}
+
+.cooperation details {
+    border-bottom: 1px solid #8b7160;
+    padding: 20px 0;
+}
+
+.cooperation summary {
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.cooperation details p {
+    color: #d9c8b9;
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.suppliers {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.supplier-text {
+    background: #d3b99e;
+    padding: 65px 12%;
+}
+
+.supplier-text p:not(.label) {
+    margin-top: 27px;
+    font-size: 14px;
+}
+
+.supplier-image {
+    min-height: 390px;
+    background: url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d");
+    background-size: cover;
+    background-position: center;
+}
+
+.application {
+    background: #e9ded1;
+    text-align: center;
+}
+
+.application form {
+    max-width: 750px;
+    margin: 35px auto 0;
+    padding: 35px;
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: left;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-bottom: 1px solid #bca997;
+    outline: none;
+    font-size: 13px;
+    font-family: Arial;
+}
+
+textarea {
+    grid-column: 1 / -1;
+    min-height: 90px;
+}
+
+.application button {
+    grid-column: 1 / -1;
+    background: #49352b;
+    color: white;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.application button:hover {
+    background: #bd895d;
+}
+
+.partners {
+    background: #f7f2eb;
+}
+
+.partner-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.partner-list div {
+    background: #e6d8c9;
+    color: #68432e;
+    padding: 25px 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.news {
+    background: #d3b99e;
+}
+
+.news-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.news-card {
+    background: #eee3d7;
+    padding: 25px;
+    min-height: 190px;
+}
+
+.news-card small {
+    color: #98775e;
+}
+
+.news-card h3 {
+    margin: 20px 0 12px;
+}
+
+.news-card p {
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.contacts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: center;
+    background: #f7f2eb;
+}
+
+.contacts p {
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.contact-photo {
+    height: 300px;
+    background: url("https://images.unsplash.com/photo-1509042239860-f550ce710b93");
+    background-size: cover;
+    background-position: center;
+}
+
+footer {
+    background: #29201b;
+    color: #d7c5b5;
+    padding: 35px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+footer p {
+    font-size: 12px;
+}
+
+@media(max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 430px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .about,
+    .suppliers,
+    .contacts {
+        grid-template-columns: 1fr;
+    }
+
+    .products,
+    .news-list {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        gap: 20px;
+    }
+
+    .supplier-image {
+        min-height: 250px;
+    }
+
+    .application form {
+        grid-template-columns: 1fr;
+        padding: 22px;
+    }
+
+    .application textarea,
+    .application button {
+        grid-column: 1;
+    }
+
+    .partner-list {
+        justify-content: center;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
